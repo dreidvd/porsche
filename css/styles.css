@@ -1,0 +1,615 @@
+/* ============================================
+   COMMON STYLES - Shared across all pages
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: #111;
+    color: white;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header .logo img {
+    width: 120px;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.05);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+header nav ul li a:hover {
+    color: #C41E3A;
+    background-color: rgba(196, 30, 58, 0.1);
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #C41E3A;
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    width: 80%;
+}
+
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+}
+
+.intro {
+    background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #C41E3A, transparent);
+}
+
+.intro h1 {
+    font-size: 56px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #fff 0%, #C41E3A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 1s ease-out;
+}
+
+.intro p {
+    font-size: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   INDEX PAGE SPECIFIC STYLES
+   ============================================ */
+
+.history-container,
+.car-box-container {
+    background-color: #000000;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.history-container::before,
+.car-box-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #C41E3A, transparent);
+}
+
+.history-content,
+.car-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.history-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 0 3px #C41E3A;
+    border-left: 6px solid #C41E3A;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.history-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(196, 30, 58, 0.3), 0 0 0 3px #C41E3A;
+}
+
+.history-content .img {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.history-content .img img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.5s ease;
+}
+
+.history-content:hover .img img {
+    transform: scale(1.05);
+}
+
+.history-content .text-content {
+    padding: 40px;
+}
+
+.history-content .text-content h2 {
+    font-size: 28px;
+    color: #C41E3A;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.history-content .text-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.car-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 0 3px #C41E3A;
+    border-left: 6px solid #C41E3A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease-out;
+    overflow: hidden;
+    position: relative;
+}
+
+.car-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #C41E3A, transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(196, 30, 58, 0.4), 0 0 0 3px #C41E3A;
+}
+
+.car-card:hover::before {
+    transform: scaleX(1);
+}
+
+.car-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0;
+    animation: fadeInImage 1s forwards;
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover img {
+    transform: scale(1.08);
+}
+
+.car-info {
+    padding: 20px;
+    width: 100%;
+}
+
+.car-info h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #C41E3A;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.car-info p {
+    font-size: 14px;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.buttons p {
+    font-size: 12px;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.color-option {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-option:hover {
+    transform: scale(1.2);
+    border-color: #C41E3A;
+    border-width: 4px;
+    box-shadow: 0 4px 12px rgba(196, 30, 58, 0.4);
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ============================================
+   DISCLAIMER MODAL
+   ============================================ */
+
+.disclaimer-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModal 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.disclaimer-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(196, 30, 58, 0.5), 0 0 0 4px #C41E3A;
+    border-left: 6px solid #C41E3A;
+    overflow: hidden;
+    animation: slideUp 0.4s ease;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.disclaimer-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #C41E3A, transparent);
+}
+
+.disclaimer-header {
+    background: linear-gradient(135deg, #C41E3A 0%, #E2001A 100%);
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.disclaimer-header h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.disclaimer-body {
+    padding: 40px 30px;
+    color: #333;
+}
+
+.disclaimer-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.disclaimer-body p:last-child {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.disclaimer-body strong {
+    color: #C41E3A;
+    font-weight: 700;
+}
+
+.disclaimer-footer {
+    padding: 25px 30px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-top: 2px solid #e0e0e0;
+}
+
+.disclaimer-button {
+    padding: 15px 50px;
+    background: linear-gradient(135deg, #C41E3A 0%, #E2001A 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+    font-family: 'Oswald', sans-serif;
+}
+
+.disclaimer-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(196, 30, 58, 0.6);
+    background: linear-gradient(135deg, #E2001A 0%, #C41E3A 100%);
+}
+
+.disclaimer-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .disclaimer-content {
+        max-width: 95%;
+        margin: 20px;
+    }
+    
+    .disclaimer-header h2 {
+        font-size: 22px;
+    }
+    
+    .disclaimer-body {
+        padding: 30px 20px;
+    }
+    
+    .disclaimer-body p {
+        font-size: 14px;
+    }
+    
+    .disclaimer-footer {
+        padding: 20px;
+    }
+    
+    .disclaimer-button {
+        padding: 12px 40px;
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .history-content,
+    .car-container {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+    
+    .car-container {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .intro {
+        padding: 60px 20px;
+    }
+    
+    .intro h1 {
+        font-size: 36px;
+    }
+    
+    .intro p {
+        font-size: 18px;
+    }
+    
+    .history-container,
+    .car-box-container {
+        padding: 60px 0;
+    }
+    
+    .history-content,
+    .car-container {
+        padding: 0 20px;
+    }
+    
+    .history-content .text-content {
+        padding: 30px 20px;
+    }
+    
+    .car-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .car-card {
+        padding: 15px;
+    }
+    
+    .car-card img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        width: 80px;
+    }
+    
+    header nav ul {
+        gap: 10px;
+    }
+    
+    header nav ul li a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .intro h1 {
+        font-size: 28px;
+    }
+    
+    .intro p {
+        font-size: 16px;
+    }
+    
+    .history-content .text-content h2 {
+        font-size: 22px;
+    }
+    
+    .car-info h2 {
+        font-size: 20px;
+    }
+}
+

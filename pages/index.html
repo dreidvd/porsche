@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Porsche USA - Car Models</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+
+    <link rel="icon" href="../images/logo.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../images/logo.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+</head>
+
+<body>
+    <!-- Disclaimer Modal -->
+    <div id="disclaimerModal" class="disclaimer-modal">
+        <div class="disclaimer-content">
+            <div class="disclaimer-header">
+                <h2>⚠️ Important Notice</h2>
+            </div>
+            <div class="disclaimer-body">
+                <p><strong>This is NOT an official Porsche website.</strong></p>
+                <p>This website is a <strong>school project</strong> created for educational purposes only.</p>
+                <p>This is <strong>not a collaboration</strong> with Porsche AG or any of its affiliates.</p>
+                <p>All content, images, and information are used for educational demonstration purposes.</p>
+                <p>Porsche, the Porsche crest, and all Porsche model names are trademarks of Dr. Ing. h.c. F. Porsche
+                    AG.</p>
+            </div>
+            <div class="disclaimer-footer">
+                <button id="acceptDisclaimer" class="disclaimer-button">I Understand</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="Porsche Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="developer.html">Developer</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h1>Welcome to Porsche</h1>
+        <p>Experience the thrill of driving with Porsche, a brand that brings together exceptional engineering, design,
+            and performance.</p>
+    </section>
+
+    <main>
+        <div class="history-container">
+            <div class="history-content">
+                <div class="img">
+                    <img src="../images/LeMans.png" alt="Le Mans">
+                </div>
+                <div class="text-content">
+                    <h2>The 24 Hours of Le Mans: A Porsche
+                        Legacy</h2>
+                    <p>The 24 Hours of Le Mans is one of the
+                        biggest dates in the motorsport calendar. Ahead of its 101st edition, discover its history and
+                        what makes it so special for Porsche
+                        When it comes to endurance racing, there’s a weekend each year that’s ringed in the calendar of
+                        all motorsport fans. Along with the Monaco Grand Prix and the Indy 500, the 24 Hours of Le Mans
+                        is one of the most famous of all motor racing events. Held every June at Le Mans in north-west
+                        France, the event celebrated its 100th anniversary last year.
+                        Ahead of the 2024 – and 101st – running of the race, we look at why the 24 Hours of Le Mans is
+                        so revered, about its history, its format, the gruelling nature of 24-hour racing and why it
+                        holds a special place in the hearts of Porsche and its teams..</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="car-box-container">
+            <div class="car-container">
+
+                <div class="car-card fade">
+                    <img id="car-718" src="../images/718-black.avif" alt="Porsche 718">
+                    <div class="car-info">
+                        <h2>718</h2>
+                        <p>From $72,800 - Mid-engine sports car.</p>
+                        <div class="buttons">
+                            <p>Choose your color</p>
+                            <span class="color-option" style="background-color: rgb(69, 100, 236);"
+                                onclick="changeCarColor('car-718', '../images/718-blue.avif')"></span>
+                            <span class="color-option" style="background-color: black;"
+                                onclick="changeCarColor('car-718', '../images/718-black.avif')"></span>
+                            <span class="color-option" style="background-color: rgb(236, 104, 27);"
+                                onclick="changeCarColor('car-718', '../images/718-orange.avif')"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="car-card fade">
+                    <img id="car-911" src="../images/911-red.avif" alt="Porsche 911">
+                    <div class="car-info">
+                        <h2>911</h2>
+                        <p>From $120,100 - Iconic, rear-engine sports car.</p>
+                        <div class="buttons">
+                            <p>Choose your color</p>
+                            <span class="color-option" style="background-color: red;"
+                                onclick="changeCarColor('car-911', '../images/911-red.avif')"></span>
+                            <span class="color-option" style="background-color: white;"
+                                onclick="changeCarColor('car-911', '../images/911-white.avif')"></span>
+                            <span class="color-option" style="background-color: yellow;"
+                                onclick="changeCarColor('car-911', '../images/911-yellow.avif')"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="car-card fade">
+                    <img id="car-panamera" src="../images/pan-black.avif" alt="Porsche Panamera">
+                    <div class="car-info">
+                        <h2>Panamera</h2>
+                        <p>From $92,400 - Luxury and performance in one.</p>
+                        <div class="buttons">
+                            <p>Choose your color</p>
+                            <span class="color-option" style="background-color: blue;"
+                                onclick="changeCarColor('car-panamera', '../images/pan-blue.avif')"></span>
+                            <span class="color-option" style="background-color: black;"
+                                onclick="changeCarColor('car-panamera', '../images/pan-black.avif')"></span>
+                            <span class="color-option" style="background-color: white;"
+                                onclick="changeCarColor('car-panamera', '../images/pan-white.avif')"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="car-card fade">
+                    <img id="car-taycan" src="../images/taycan-red.avif" alt="Porsche Taycan">
+                    <div class="car-info">
+                        <h2>Taycan</h2>
+                        <p>From $86,700 - Electrifying performance.</p>
+                        <div class="buttons">
+                            <p>Choose your color</p>
+                            <span class="color-option" style="background-color: red;"
+                                onclick="changeCarColor('car-taycan', '../images/taycan-red.avif')"></span>
+                            <span class="color-option" style="background-color: green;"
+                                onclick="changeCarColor('car-taycan', '../images/taycan-green.avif')"></span>
+                            <span class="color-option" style="background-color: white;"
+                                onclick="changeCarColor('car-taycan', '../images/taycan-white.avif')"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025 Porsche USA. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+        function changeCarColor(carId, imagePath) {
+            document.getElementById(carId).src = imagePath;
+        }
+
+
+        const fadeElements = document.querySelectorAll('.fade');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Disclaimer Modal
+        const disclaimerModal = document.getElementById('disclaimerModal');
+        const acceptButton = document.getElementById('acceptDisclaimer');
+
+        // Check if user has already seen the disclaimer
+        const hasSeenDisclaimer = sessionStorage.getItem('disclaimerSeen');
+
+        if (!hasSeenDisclaimer) {
+            // Show modal after a short delay
+            setTimeout(() => {
+                disclaimerModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }, 500);
+        }
+
+        // Close modal when button is clicked
+        acceptButton.addEventListener('click', () => {
+            disclaimerModal.style.opacity = '0';
+            setTimeout(() => {
+                disclaimerModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                sessionStorage.setItem('disclaimerSeen', 'true');
+            }, 300);
+        });
+
+        // Close modal when clicking outside the content
+        disclaimerModal.addEventListener('click', (e) => {
+            if (e.target === disclaimerModal) {
+                disclaimerModal.style.opacity = '0';
+                setTimeout(() => {
+                    disclaimerModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                    sessionStorage.setItem('disclaimerSeen', 'true');
+                }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

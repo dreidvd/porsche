@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Porsche USA - Contact Developers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/contact.css" rel="stylesheet">
+    
+    <link rel="icon" href="../images/logo.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../images/logo.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="Porsche Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="developer.html">Developer</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Form</h2>
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('This is a demo form. Form submission is disabled for this school project.'); return false;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+
+        <div class="contact-container">
+            <h3>Other Contact Methods</h3>
+            <ul>
+                <li>Email: <a href="mailto:contact@porschewebsite.com">contact@porschewebsite.com</a></li>
+                <li>Phone: <a href="tel:+18001234567">+1 800-123-4567</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Porsche Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

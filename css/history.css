@@ -1,0 +1,290 @@
+/* ============================================
+   HISTORY PAGE SPECIFIC STYLES
+   ============================================ */
+
+.timeline-container {
+    background: linear-gradient(180deg, #000000 0%, #1a0000 50%, #000000 100%);
+    padding: 50px 0;
+    position: relative;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #C41E3A, transparent);
+}
+
+.timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #C41E3A 0%, #E2001A 50%, #C41E3A 100%);
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(196, 30, 58, 0.5);
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    color: #000;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 0 3px #C41E3A;
+    width: 45%;
+    position: relative;
+    border-left: 6px solid #C41E3A;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(196, 30, 58, 0.3), 0 0 0 3px #C41E3A;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #C41E3A;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.timeline-year {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #C41E3A 0%, #E2001A 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.6), 0 0 0 3px #000;
+    border: 2px solid #fff;
+}
+
+.milestone-section {
+    background-color: #000000;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.milestone-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.milestone-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    color: #000;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 0 3px #C41E3A;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease;
+    border-top: 6px solid #C41E3A;
+}
+
+.milestone-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(196, 30, 58, 0.4), 0 0 0 3px #C41E3A;
+}
+
+.milestone-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.milestone-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #C41E3A;
+    font-weight: 700;
+}
+
+.milestone-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #C41E3A;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1024px) {
+    .timeline-content {
+        width: 48%;
+    }
+    
+    .milestone-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 60px 0;
+    }
+    
+    .timeline {
+        padding: 0 15px;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        padding-left: 50px;
+        margin-bottom: 60px;
+    }
+
+    .timeline-content {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 30px 20px;
+    }
+
+    .timeline-year {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+    
+    .milestone-section {
+        padding: 60px 0;
+    }
+    
+    .milestone-container {
+        padding: 0 15px;
+    }
+    
+    .milestone-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+    }
+    
+    .milestone-card {
+        padding: 25px;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-item {
+        padding-left: 40px;
+        margin-bottom: 50px;
+    }
+    
+    .timeline-content {
+        padding: 25px 15px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 20px;
+    }
+    
+    .timeline-year {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    
+    .milestone-card {
+        padding: 20px;
+    }
+    
+    .milestone-card h3 {
+        font-size: 20px;
+    }
+}
+

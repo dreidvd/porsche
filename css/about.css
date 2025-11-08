@@ -1,0 +1,117 @@
+/* ============================================
+   ABOUT PAGE SPECIFIC STYLES
+   ============================================ */
+
+.section-container {
+    background-color: #000000;
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #C41E3A, transparent);
+}
+
+.section-container .image-container {
+    margin-bottom: 30px;
+}
+
+.section-container .section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 0 3px #C41E3A;
+    border-left: 6px solid #C41E3A;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.4s ease;
+}
+
+.section-container .section-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-container .section-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(196, 30, 58, 0.3), 0 0 0 3px #C41E3A;
+}
+
+.section-container h2 {
+    font-size: 28px;
+    color: #C41E3A;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-container p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    max-height: none;
+    overflow: visible;
+    text-overflow: unset;
+    display: block;
+    -webkit-box-orient: unset;
+}
+
+.image-container img {
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    animation: fadeIn 1s ease-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-container {
+        padding: 60px 0;
+        margin-bottom: 40px;
+    }
+    
+    .section-container .section-content {
+        padding: 30px 20px;
+        margin: 0 20px;
+    }
+    
+    .section-container h2 {
+        font-size: 24px;
+    }
+    
+    .section-container p {
+        font-size: 14px;
+    }
+    
+    .image-container img {
+        width: 90%;
+    }
+}
+

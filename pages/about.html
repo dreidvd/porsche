@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Porsche - Heritage, Innovation, and Luxury</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/about.css" rel="stylesheet">
+
+    <link rel="icon" href="../images/logo.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../images/logo.png" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../images/logo.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="Porsche Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="developer.html">Developer</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h1>Welcome to Porsche</h1>
+        <p>Experience the thrill of driving with Porsche, a brand that brings together exceptional engineering, design,
+            and performance.</p>
+    </section>
+
+    <main>
+        <div class="section-container">
+            <div class="image-container">
+                <img src="../images/porsche.png" alt="Porsche Image">
+            </div>
+            <div class="section-content">
+                <h2>Background Information</h2>
+                <p>Over the decades, Porsche has become synonymous with high-performance vehicles, blending cutting-edge
+                    technology with timeless design. The brand is known for models like the Porsche 911, which has
+                    become
+                    an icon in the sports car world. Today, Porsche continues to innovate in both the performance and
+                    sustainability sectors, introducing electric models such as the Taycan, while staying true to its
+                    heritage of precision engineering, driving performance, and exclusivity.</p>
+            </div>
+        </div>
+
+        <div class="section-container">
+            <div class="section-content">
+                <h2>Porsche's Commitment to Excellence</h2>
+                <p>Porsche’s commitment to excellence extends beyond cars, as the brand also offers exclusive
+                    experiences,
+                    motorsports events, and a growing focus on electric mobility, aiming to lead the future of
+                    high-performance automobiles.</p>
+            </div>
+        </div>
+
+        <div class="section-container">
+            <div class="section-content">
+                <h2>Purpose of the Website</h2>
+                <p>The purpose of this website is to provide a comprehensive digital platform that showcases the brand's
+                    heritage, innovation, and luxury offerings. It aims to engage potential customers, fans, and
+                    automotive
+                    enthusiasts by offering detailed information about Porsche’s range of sports cars, technology, and
+                    services. The website also serves as a resource for current owners with features like vehicle
+                    configurators, dealership locators, and customer support. Additionally, Porsche's website reflects
+                    the brand's commitment to sustainability, performance, and cutting-edge design, ensuring visitors
+                    can connect with the brand’s legacy and vision for the future of automotive excellence.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Porsche USA. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+        window.addEventListener("scroll", function () {
+            const elements = document.querySelectorAll(".section-content");
+            elements.forEach(function (element) {
+                if (element.getBoundingClientRect().top < window.innerHeight) {
+                    element.classList.add("visible");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
